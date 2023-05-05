@@ -129,6 +129,7 @@ begin
 				lock<='0';
 			elsif (crnt_state=lock_idle) then
 				lock<='1';
+				error<='0';
 			elsif (crnt_state=wrong_pass) then
 				error<='1';
 				lock<='1';
