@@ -86,27 +86,27 @@ begin
 			nxt_state<=crnt_state;
 			case crnt_state is
 				when redRed1 =>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=redGreen;
 					end if;
 				when redGreen =>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=redRed2;
 					end if;
 				when redRed2=>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=redYellowRed;
 					end if;
 				when redYellowRed=>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=greenRed;
 					end if;
 				when greenRed =>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=yellowRed;
 					end if;
 				when yellowRed =>
-					if(count=waitLength) then
+					if(count=waitLength-1) then
 						nxt_state<=redRed1;
 					end if;
 				when others =>
